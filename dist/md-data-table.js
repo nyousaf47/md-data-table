@@ -35,7 +35,7 @@ angular.module('md-table-pagination.html', []).run(['$templateCache', function (
     '    <md-icon md-svg-icon="navigate-before.svg"></md-icon>\n' +
     '  </md-button>\n' +
     '\n' +
-    '  <div class="label">{{$pagination.page}} sur {{$pagination.pages}}</div>\n' +
+    '  <div class="label">{{$pagination.page}} sur {{$pagination.pages()}}</div>\n' +
     '\n' +
     '  <md-button class="md-icon-button" type="button" ng-click="$pagination.next()" ng-disabled="$pagination.disabled || !$pagination.hasNext()" aria-label="Next">\n' +
     '    <md-icon md-svg-icon="navigate-next.svg"></md-icon>\n' +

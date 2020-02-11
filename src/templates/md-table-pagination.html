@@ -22,7 +22,7 @@
     <md-icon md-svg-icon="navigate-before.svg"></md-icon>
   </md-button>
 
-  <div class="label">{{$pagination.page}} sur {{$pagination.pages}}</div>
+  <div class="label">{{$pagination.page}} sur {{$pagination.pages()}}</div>
 
   <md-button class="md-icon-button" type="button" ng-click="$pagination.next()" ng-disabled="$pagination.disabled || !$pagination.hasNext()" aria-label="Next">
     <md-icon md-svg-icon="navigate-next.svg"></md-icon>
