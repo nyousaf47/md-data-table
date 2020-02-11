@@ -21,17 +21,11 @@ angular.module('md-table-pagination.html', []).run(['$templateCache', function (
     '  </md-select>\n' +
     '</div>\n' +
     '\n' +
-    '<div class="limit-select" ng-if="$pagination.limitOptions">\n' +
-    '  <div class="label">{{$pagination.label.rowsPerPage}}</div>\n' +
-    '\n' +
-    '  <md-select class="md-table-select" ng-model="$pagination.limit" md-container-class="md-pagination-select" ng-disabled="$pagination.disabled" aria-label="Rows" placeholder="{{ $pagination.limitOptions[0] }}">\n' +
-    '    <md-option ng-repeat="option in $pagination.limitOptions" ng-value="option.value ? $pagination.eval(option.value) : option">{{::option.label ? option.label : option}}</md-option>\n' +
-    '  </md-select>\n' +
-    '</div>\n' +
     '\n' +
     '<div class="buttons">\n' +
     '  <!-- <div class="label">{{$pagination.min()}} - {{$pagination.max()}} {{$pagination.label.of}} {{$pagination.total}}</div> -->\n' +
-    '  <!-- Test Commit to check Code is working or not -->\n' +
+    '\n' +
+    '\n' +
     '\n' +
     '  <md-button class="md-icon-button" type="button" ng-if="$pagination.showBoundaryLinks()" ng-click="$pagination.first()" ng-disabled="$pagination.disabled || !$pagination.hasPrevious()" aria-label="First">\n' +
     '    <md-icon md-svg-icon="navigate-first.svg"></md-icon>\n' +
@@ -41,6 +35,8 @@ angular.module('md-table-pagination.html', []).run(['$templateCache', function (
     '    <md-icon md-svg-icon="navigate-before.svg"></md-icon>\n' +
     '  </md-button>\n' +
     '\n' +
+    '  <div class="label">{{$pagination.page}} sur {{$pagination.pages}}</div>\n' +
+    '\n' +
     '  <md-button class="md-icon-button" type="button" ng-click="$pagination.next()" ng-disabled="$pagination.disabled || !$pagination.hasNext()" aria-label="Next">\n' +
     '    <md-icon md-svg-icon="navigate-next.svg"></md-icon>\n' +
     '  </md-button>\n' +
@@ -48,7 +44,16 @@ angular.module('md-table-pagination.html', []).run(['$templateCache', function (
     '  <md-button class="md-icon-button" type="button" ng-if="$pagination.showBoundaryLinks()" ng-click="$pagination.last()" ng-disabled="$pagination.disabled || !$pagination.hasNext()" aria-label="Last">\n' +
     '    <md-icon md-svg-icon="navigate-last.svg"></md-icon>\n' +
     '  </md-button>\n' +
-    '</div>');
+    '</div>\n' +
+    '\n' +
+    '<div class="limit-select" ng-if="$pagination.limitOptions">\n' +
+    '  <div class="label">{{$pagination.label.rowsPerPage}}</div>\n' +
+    '\n' +
+    '  <md-select class="md-table-select" ng-model="$pagination.limit" md-container-class="md-pagination-select" ng-disabled="$pagination.disabled" aria-label="Rows" placeholder="{{ $pagination.limitOptions[0] }}">\n' +
+    '    <md-option ng-repeat="option in $pagination.limitOptions" ng-value="option.value ? $pagination.eval(option.value) : option">{{::option.label ? option.label : option}}</md-option>\n' +
+    '  </md-select>\n' +
+    '</div>\n' +
+    '');
 }]);
 
 angular.module('md-table-progress.html', []).run(['$templateCache', function ($templateCache) {
