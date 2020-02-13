@@ -12,7 +12,7 @@ function mdTablePagination() {
     var self = this;
     var defaultLabel = {
       page: 'Page:',
-      rowsPerPage: 'Rows per page:',
+      rowsPerPage: 'résultats par page:',
       of: 'of'
     };
 
